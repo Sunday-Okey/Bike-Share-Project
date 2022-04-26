@@ -31,8 +31,8 @@ def get_filters():
     'wednesday', 'thursday', 'friday', 'saturday']
     while True:
         city = input(
-            "\nWould you like to explore data for Chicago, New York or Washington?\n")
-        if city.lower() in cities:
+            "\nWould you like to explore data for Chicago, New York or Washington?\n").lower()
+        if city in cities:
             break
         print('Please enter a valid city!')
 
@@ -42,15 +42,15 @@ def get_filters():
         print('You can also see data for all months should you decide to.')
         time.sleep(2)
         month = input(
-                'Please type "all" if you would like to view data for all months or just select a specific month')
-        if month.lower() in months:
+                'Please type "all" if you would like to view data for all months or just select a specific month').lower()
+        if month in months:
             break
         print('Please enter the month between January and June!')
     while True:
         print('\nPlease enter the day of the week (e.g Sunday,Monday e.t.c).')
         time.sleep(2)
         day = input(
-                    '\nYou can also view data for all days of the week.\nPlease type "all" if you would like to view data by all days.\n')
+                    '\nYou can also view data for all days of the week.\nPlease type "all" if you would like to view data by all days.\n').lower()
     
         if day in days:
             break
